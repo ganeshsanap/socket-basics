@@ -4,6 +4,9 @@ var room = getQueryVariable('room');
 
 console.log(name + ' wants to join ' + room);
 
+// Update room title tag
+jQuery('.room-title').text(room);
+
 socket.on('connect', function() {
     console.log('Connected to socket.io server!');
 });
